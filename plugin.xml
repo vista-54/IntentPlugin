@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+	id="com.radiusnetworks.ibeaconreference.IntentPlugin"
+	version="0.1.0">
+  <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+
+
+	<name>PushServicePlugin</name>
+	<description></description>
+	<author>Vista</author>
+	<keywords></keywords>
+	<license>Apache 2.0</license>
+
+	<js-module src="www/intentPlagin.js" name="IntentPlugin">
+		<clobbers target="IntentPlugin" />
+	</js-module>
+	
+
+	
+	
+
+
+	<platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="IntentPlugin">
+                <param name="android-package" value="com.radiusnetworks.ibeaconreference.IntentPlugin" />
+            </feature>
+        </config-file>  
+        <source-file src="Android/com/radiusnetworks/ibeaconreference/IntentPlugin.java" target-dir="src/com/radiusnetworks/ibeaconreference/IntentPlugin" />
+        <source-file src="Android/com/radiusnetworks/ibeaconreference/MonitoringActivity.java" target-dir="src/com/radiusnetworks/ibeaconreference/IntentPlugin" />
+        <source-file src="Android/com/radiusnetworks/ibeaconreference/BeaconServiceUtility.java" target-dir="src/com/radiusnetworks/ibeaconreference/IntentPlugin" />
+        <source-file src="Android/com/radiusnetworks/ibeaconreference/BeaconDetactorService.java" target-dir="src/com/radiusnetworks/ibeaconreference/IntentPlugin" />
+
+		<source-file src="Android/libs/android-support-v4.jar" target-dir="libs" framework="true" />
+		<source-file src="Android/libs/android-ibeacon-service.jar" target-dir="libs" framework="true" />
+     
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.BLUETOOTH" />
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+        </config-file>
+
+    </platform>
+</plugin>
+
+	
