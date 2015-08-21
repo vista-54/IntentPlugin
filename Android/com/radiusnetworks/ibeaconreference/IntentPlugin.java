@@ -16,13 +16,13 @@ import android.webkit.WebSettings.PluginState;
 public class IntentPlugin extends CordovaPlugin{
 	
 	private boolean startScan() throws IOException {
-	    Intent intent = new Intent(getActivity(), MonitoringActivity.class);
+	    Intent intent = new Intent(this, MonitoringActivity.class);
 	    //this.cordova.getActivity().startActivity(intent);
 		return true;
 	}
 	private Context getActivity() {
 		// TODO Auto-generated method stub
-		return null;
+		return true;
 	}
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
