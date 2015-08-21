@@ -17,7 +17,7 @@ public class IntentPlugin extends CordovaPlugin{
 	
 	private boolean startScan() throws IOException {
 	    Intent intent = new Intent(getActivity(), MonitoringActivity.class);
-	    this.cordova.getActivity().startActivity(intent);
+	    //this.cordova.getActivity().startActivity(intent);
 		return true;
 	}
 	private Context getActivity() {
