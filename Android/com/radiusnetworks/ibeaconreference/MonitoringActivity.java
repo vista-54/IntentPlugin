@@ -23,7 +23,7 @@ import com.radiusnetworks.ibeacon.RangeNotifier;
 import com.radiusnetworks.ibeacon.Region;
 
 public class MonitoringActivity extends Activity implements IBeaconConsumer {
-	protected static final String TAG = "IntentPlugin"
+	protected static final String TAG = "IntentPlugin";
 
 	private ListView list = null;
 	private BeaconAdapter adapter = null;
