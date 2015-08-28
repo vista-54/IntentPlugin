@@ -9,7 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import android.util.Log;
 import android.content.Context;
-
+import android.content.ServiceConnection;
 import android.content.Intent;
 import android.webkit.WebSettings.PluginState;
 
@@ -22,6 +22,7 @@ public class IntentPlugin extends CordovaPlugin{
 	    //Intent intent = new Intent(this, MonitoringActivity.class);
 	   Intent intent= new Intent(this.cordova.getActivity().getApplicationContext(), MonitoringActivity.class);
 		//this.cordova.getActivity().startActivity(intent);
+		this.cordova.getActivity().startService(intent);
 		Log.e(TAG, "Success"+intent);
 		
 	}
