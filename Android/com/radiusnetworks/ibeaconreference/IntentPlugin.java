@@ -7,8 +7,9 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
-
+import android.util.Log;
 import android.content.Context;
+
 import android.content.Intent;
 import android.webkit.WebSettings.PluginState;
 
@@ -20,7 +21,7 @@ public class IntentPlugin extends CordovaPlugin{
 	    //Intent intent = new Intent(this, MonitoringActivity.class);
 	   Intent intent= new Intent(this.cordova.getActivity().getApplicationContext(), MonitoringActivity.class);
 		//this.cordova.getActivity().startActivity(intent);
-		callbackContext.success("This was a great success...");
+		callbackContext.sendPluginResult("This was a great success...");
 	}
 	private Context getActivity() {
 		// TODO Auto-generated method stub
