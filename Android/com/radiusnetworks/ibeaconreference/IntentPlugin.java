@@ -22,7 +22,7 @@ public class IntentPlugin extends CordovaPlugin{
 	    //Intent intent = new Intent(this, MonitoringActivity.class);
 	   Intent intent= new Intent(this.cordova.getActivity().getApplicationContext(), MonitoringActivity.class);
 		//this.cordova.getActivity().startActivity(intent);
-		Log.e(TAG, "Success");
+		Log.e(TAG, "Success"+intent);
 		
 	}
 	/*private Context getActivity() {
