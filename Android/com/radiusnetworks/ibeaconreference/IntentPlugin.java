@@ -16,12 +16,12 @@ import android.webkit.WebSettings.PluginState;
 
 public class IntentPlugin extends CordovaPlugin{
 	public static final String TAG = "IntentPlugin";
-	private boolean startScan() throws IOException {
+	private void startScan() throws IOException {
 		Log.e(TAG, "start scan....");
 	    //Intent intent = new Intent(this, MonitoringActivity.class);
 	   Intent intent= new Intent(this.cordova.getActivity().getApplicationContext(), MonitoringActivity.class);
 		//this.cordova.getActivity().startActivity(intent);
-		callbackContext.sendPluginResult("This was a great success...");
+		
 	}
 	private Context getActivity() {
 		// TODO Auto-generated method stub
