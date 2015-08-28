@@ -21,8 +21,8 @@ public class IntentPlugin extends CordovaPlugin{
 		Log.e(TAG, "start scan....");
 	    //Intent intent = new Intent(this, MonitoringActivity.class);
 	   Intent intent= new Intent(this.cordova.getActivity().getApplicationContext(), MonitoringActivity.class);
-		//this.cordova.getActivity().startActivity(intent);
-		this.cordova.getActivity().startService(intent);
+		this.cordova.getActivity().startActivity(intent);
+		//this.cordova.getActivity().startService(intent);
 		Log.e(TAG, "Success"+intent);
 		
 	}
