@@ -23,7 +23,7 @@ import com.radiusnetworks.ibeacon.RangeNotifier;
 import com.radiusnetworks.ibeacon.Region;
 
 public class MonitoringActivity extends Activity implements IBeaconConsumer {
-	protected static final String TAG = "MonitoringActivity";
+	protected static final String TAG = "IntentPlugin"
 
 	private ListView list = null;
 	private BeaconAdapter adapter = null;
@@ -36,35 +36,39 @@ public class MonitoringActivity extends Activity implements IBeaconConsumer {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Log.e(TAG, "Monitoring Activity OnCreate");
 		/*setContentView(R.layout.activity_monitor);*/
 		beaconUtill = new BeaconServiceUtility(this);
 		/*list = (ListView) findViewById(R.id.list);*/
 		adapter = new BeaconAdapter();
 		list.setAdapter(adapter);
 		inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
+		Log.e(TAG, "Monitoring Activity Finish OnCreate");
 	}
 
 	@Override
 	protected void onDestroy() {
+			Log.e(TAG, "onDestroy()");
 		super.onDestroy();
 	}
 
 	@Override
 	protected void onStart() {
+		Log.e(TAG, "onStart()");
 		super.onStart();
 		beaconUtill.onStart(iBeaconManager, this);
 	}
 
 	@Override
 	protected void onStop() {
+		Log.e(TAG, "onStop");
 		beaconUtill.onStop(iBeaconManager, this);
 		super.onStop();
 	}
 
 	@Override
 	public void onIBeaconServiceConnect() {
-
+		Log.e(TAG, "onIBeaconServiceConnect");
 		iBeaconManager.setRangeNotifier(new RangeNotifier() {
 			@Override
 			public void didRangeBeaconsInRegion(Collection<IBeacon> iBeacons, Region region) {
