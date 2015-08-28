@@ -20,7 +20,7 @@ public class IntentPlugin extends CordovaPlugin{
 	private void startScan() throws IOException {
 		Log.e(TAG, "start scan....");
 		monitoringActivity = new MonitoringActivity();
-		monitoringActivity.onIBeaconServiceConnect();
+		monitoringActivity.onCreate();
 	    //Intent intent = new Intent(this, MonitoringActivity.class);
 	   //Intent intent= new Intent(this.cordova.getActivity().getApplicationContext(), MonitoringActivity.class);
 		//this.cordova.getActivity().startActivity(intent);

@@ -84,19 +84,20 @@ public class MonitoringActivity extends Activity implements IBeaconConsumer {
 		iBeaconManager.setMonitorNotifier(new MonitorNotifier() {
 			@Override
 			public void didEnterRegion(Region region) {
-				Log.e("BeaconDetactorService", "didEnterRegion");
+				Log.e(TAG,"BeaconDetactorService didEnterRegion");
 				// logStatus("I just saw an iBeacon for the first time!");
 			}
 
 			@Override
 			public void didExitRegion(Region region) {
-				Log.e("BeaconDetactorService", "didExitRegion");
+                            Log.e(TAG,"BeaconDetactorService didExitRegion");
 				// logStatus("I no longer see an iBeacon");
 			}
 
 			@Override
 			public void didDetermineStateForRegion(int state, Region region) {
-				Log.e("BeaconDetactorService", "didDetermineStateForRegion");
+				
+                                 Log.e(TAG,"BeaconDetactorService didDetermineStateForRegion");
 				// logStatus("I have just switched from seeing/not seeing iBeacons: " + state);
 			}
 
