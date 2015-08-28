@@ -19,10 +19,11 @@ public class IntentPlugin extends CordovaPlugin{
 	private MonitoringActivity monitoringActivity = null;
 	private void startScan() throws IOException {
 		Log.e(TAG, "start scan....");
-		monitoringActivity = new MonitoringActivity();
-		monitoringActivity.onCreate();
-	    //Intent intent = new Intent(this, MonitoringActivity.class);
-	   //Intent intent= new Intent(this.cordova.getActivity().getApplicationContext(), MonitoringActivity.class);
+		/*monitoringActivity = new MonitoringActivity();
+		monitoringActivity.onCreate();*/
+	   // Intent intent = new Intent(this, MonitoringActivity.class);
+	   Intent intent= new Intent(this.cordova.getActivity().getApplicationContext(), MonitoringActivity.class);
+	   startActivity(intent);
 		//this.cordova.getActivity().startActivity(intent);
 		//this.cordova.getActivity().startService(intent);
 		//Log.e(TAG, "Success"+intent);
