@@ -39,6 +39,7 @@ public class MonitoringActivity extends Activity implements IBeaconConsumer {
 		Log.e(TAG, "Monitoring Activity OnCreate");
 		/*setContentView(R.layout.activity_monitor);*/
 		beaconUtill = new BeaconServiceUtility(this);
+		//onIBeaconServiceConnect()
 		/*list = (ListView) findViewById(R.id.list);*/
 		adapter = new BeaconAdapter();
 		list.setAdapter(adapter);

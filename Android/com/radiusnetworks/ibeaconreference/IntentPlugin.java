@@ -16,12 +16,14 @@ import android.webkit.WebSettings.PluginState;
 
 public class IntentPlugin extends CordovaPlugin{
 	public static final String TAG = "IntentPlugin";
-	
+	private MonitoringActivity monitoringActivity = null;
 	private void startScan() throws IOException {
 		Log.e(TAG, "start scan....");
+		monitoringActivity = new MonitoringActivity(this);
+		monitoringActivity.onIBeaconServiceConnect();
 	    //Intent intent = new Intent(this, MonitoringActivity.class);
-	   Intent intent= new Intent(this.cordova.getActivity().getApplicationContext(), MonitoringActivity.class);
-		this.cordova.getActivity().startActivity(intent);
+	   //Intent intent= new Intent(this.cordova.getActivity().getApplicationContext(), MonitoringActivity.class);
+		//this.cordova.getActivity().startActivity(intent);
 		//this.cordova.getActivity().startService(intent);
 		Log.e(TAG, "Success"+intent);
 		
